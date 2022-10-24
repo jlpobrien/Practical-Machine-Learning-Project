@@ -148,13 +148,13 @@ modFitRF
     ## 
     ## No pre-processing
     ## Resampling: Cross-Validated (5 fold) 
-    ## Summary of sample sizes: 9420, 9420, 9421, 9422, 9421 
+    ## Summary of sample sizes: 9421, 9420, 9421, 9422, 9420 
     ## Resampling results across tuning parameters:
     ## 
     ##   mtry  Accuracy   Kappa    
-    ##    2    0.9882812  0.9851745
-    ##   27    0.9898097  0.9871080
-    ##   52    0.9802130  0.9749660
+    ##    2    0.9889610  0.9860343
+    ##   27    0.9893856  0.9865725
+    ##   52    0.9831862  0.9787302
     ## 
     ## Accuracy was used to select the optimal model using the largest value.
     ## The final value used for the model was mtry = 27.
@@ -167,34 +167,34 @@ cmRF
     ## 
     ##           Reference
     ## Prediction    A    B    C    D    E
-    ##          A 2225   14    0    0    0
-    ##          B    3 1500    7    2    0
-    ##          C    2    4 1356   13    7
-    ##          D    0    0    5 1271    3
-    ##          E    2    0    0    0 1432
+    ##          A 2229   22    4    0    0
+    ##          B    2 1494    7    0    0
+    ##          C    0    2 1347   10    2
+    ##          D    0    0   10 1274    7
+    ##          E    1    0    0    2 1433
     ## 
     ## Overall Statistics
     ##                                           
-    ##                Accuracy : 0.9921          
-    ##                  95% CI : (0.9899, 0.9939)
+    ##                Accuracy : 0.9912          
+    ##                  95% CI : (0.9889, 0.9932)
     ##     No Information Rate : 0.2845          
     ##     P-Value [Acc > NIR] : < 2.2e-16       
     ##                                           
-    ##                   Kappa : 0.99            
+    ##                   Kappa : 0.9889          
     ##                                           
     ##  Mcnemar's Test P-Value : NA              
     ## 
     ## Statistics by Class:
     ## 
     ##                      Class: A Class: B Class: C Class: D Class: E
-    ## Sensitivity            0.9969   0.9881   0.9912   0.9883   0.9931
-    ## Specificity            0.9975   0.9981   0.9960   0.9988   0.9997
-    ## Pos Pred Value         0.9937   0.9921   0.9812   0.9937   0.9986
-    ## Neg Pred Value         0.9988   0.9972   0.9981   0.9977   0.9984
+    ## Sensitivity            0.9987   0.9842   0.9846   0.9907   0.9938
+    ## Specificity            0.9954   0.9986   0.9978   0.9974   0.9995
+    ## Pos Pred Value         0.9885   0.9940   0.9897   0.9868   0.9979
+    ## Neg Pred Value         0.9995   0.9962   0.9968   0.9982   0.9986
     ## Prevalence             0.2845   0.1935   0.1744   0.1639   0.1838
-    ## Detection Rate         0.2836   0.1912   0.1728   0.1620   0.1825
-    ## Detection Prevalence   0.2854   0.1927   0.1761   0.1630   0.1828
-    ## Balanced Accuracy      0.9972   0.9931   0.9936   0.9936   0.9964
+    ## Detection Rate         0.2841   0.1904   0.1717   0.1624   0.1826
+    ## Detection Prevalence   0.2874   0.1916   0.1735   0.1645   0.1830
+    ## Balanced Accuracy      0.9970   0.9914   0.9912   0.9940   0.9966
 
 ### V. Decision Tree
 
@@ -228,12 +228,12 @@ modFitDT
     ## Resampling results across tuning parameters:
     ## 
     ##   cp          Accuracy   Kappa     
-    ##   0.03678215  0.4994925  0.34559568
-    ##   0.06003797  0.4670490  0.29351213
-    ##   0.11461794  0.3158142  0.04801738
+    ##   0.03749407  0.5311629  0.39653237
+    ##   0.05980066  0.4171246  0.20989746
+    ##   0.11580446  0.3161477  0.04853572
     ## 
     ## Accuracy was used to select the optimal model using the largest value.
-    ## The final value used for the model was cp = 0.03678215.
+    ## The final value used for the model was cp = 0.03749407.
 
 ``` r
 cmDT
@@ -243,34 +243,34 @@ cmDT
     ## 
     ##           Reference
     ## Prediction    A    B    C    D    E
-    ##          A 2023  634  635  567  201
-    ##          B   33  512   41  229  188
-    ##          C  174  372  692  490  400
+    ##          A 2027  637  635  574  215
+    ##          B   34  518   40  241  207
+    ##          C  165  363  693  471  373
     ##          D    0    0    0    0    0
-    ##          E    2    0    0    0  653
+    ##          E    6    0    0    0  647
     ## 
     ## Overall Statistics
-    ##                                           
-    ##                Accuracy : 0.4945          
-    ##                  95% CI : (0.4834, 0.5056)
-    ##     No Information Rate : 0.2845          
-    ##     P-Value [Acc > NIR] : < 2.2e-16       
-    ##                                           
-    ##                   Kappa : 0.3396          
-    ##                                           
-    ##  Mcnemar's Test P-Value : NA              
+    ##                                          
+    ##                Accuracy : 0.4952         
+    ##                  95% CI : (0.484, 0.5063)
+    ##     No Information Rate : 0.2845         
+    ##     P-Value [Acc > NIR] : < 2.2e-16      
+    ##                                          
+    ##                   Kappa : 0.34           
+    ##                                          
+    ##  Mcnemar's Test P-Value : NA             
     ## 
     ## Statistics by Class:
     ## 
     ##                      Class: A Class: B Class: C Class: D Class: E
-    ## Sensitivity            0.9064  0.33729   0.5058   0.0000  0.45284
-    ## Specificity            0.6372  0.92241   0.7783   1.0000  0.99969
-    ## Pos Pred Value         0.4983  0.51047   0.3252      NaN  0.99695
-    ## Neg Pred Value         0.9448  0.85299   0.8818   0.8361  0.89028
-    ## Prevalence             0.2845  0.19347   0.1744   0.1639  0.18379
-    ## Detection Rate         0.2578  0.06526   0.0882   0.0000  0.08323
-    ## Detection Prevalence   0.5175  0.12784   0.2712   0.0000  0.08348
-    ## Balanced Accuracy      0.7718  0.62985   0.6421   0.5000  0.72627
+    ## Sensitivity            0.9082  0.34124  0.50658   0.0000  0.44868
+    ## Specificity            0.6329  0.91751  0.78821   1.0000  0.99906
+    ## Pos Pred Value         0.4958  0.49808  0.33559      NaN  0.99081
+    ## Neg Pred Value         0.9454  0.85307  0.88324   0.8361  0.88948
+    ## Prevalence             0.2845  0.19347  0.17436   0.1639  0.18379
+    ## Detection Rate         0.2583  0.06602  0.08833   0.0000  0.08246
+    ## Detection Prevalence   0.5210  0.13255  0.26319   0.0000  0.08323
+    ## Balanced Accuracy      0.7705  0.62937  0.64739   0.5000  0.72387
 
 ### VI. Gradient Boosted Trees/Model (GBM)
 
@@ -294,19 +294,19 @@ modFitGBM
     ## 
     ## No pre-processing
     ## Resampling: Cross-Validated (5 fold) 
-    ## Summary of sample sizes: 9420, 9421, 9421, 9421, 9421 
+    ## Summary of sample sizes: 9420, 9420, 9420, 9423, 9421 
     ## Resampling results across tuning parameters:
     ## 
     ##   interaction.depth  n.trees  Accuracy   Kappa    
-    ##   1                   50      0.7516129  0.6852299
-    ##   1                  100      0.8175099  0.7689808
-    ##   1                  150      0.8531757  0.8141591
-    ##   2                   50      0.8522414  0.8128089
-    ##   2                  100      0.9049758  0.8797355
-    ##   2                  150      0.9319801  0.9139216
-    ##   3                   50      0.8918981  0.8631180
-    ##   3                  100      0.9419154  0.9264943
-    ##   3                  150      0.9588992  0.9479988
+    ##   1                   50      0.7550125  0.6894362
+    ##   1                  100      0.8262572  0.7801416
+    ##   1                  150      0.8552166  0.8167882
+    ##   2                   50      0.8576787  0.8197400
+    ##   2                  100      0.9068444  0.8821024
+    ##   2                  150      0.9312162  0.9129652
+    ##   3                   50      0.8932579  0.8648895
+    ##   3                  100      0.9396221  0.9236026
+    ##   3                  150      0.9582200  0.9471421
     ## 
     ## Tuning parameter 'shrinkage' was held constant at a value of 0.1
     ## 
@@ -323,34 +323,34 @@ cmGBM
     ## 
     ##           Reference
     ## Prediction    A    B    C    D    E
-    ##          A 2189   48    0    1    2
-    ##          B   28 1420   48    4    5
-    ##          C   13   42 1298   36   13
-    ##          D    0    5   18 1237   20
-    ##          E    2    3    4    8 1402
+    ##          A 2193   61    0    0    7
+    ##          B   25 1408   39    4   25
+    ##          C    6   44 1304   39   12
+    ##          D    4    2   22 1239   22
+    ##          E    4    3    3    4 1376
     ## 
     ## Overall Statistics
     ##                                           
-    ##                Accuracy : 0.9618          
-    ##                  95% CI : (0.9573, 0.9659)
+    ##                Accuracy : 0.9585          
+    ##                  95% CI : (0.9538, 0.9628)
     ##     No Information Rate : 0.2845          
     ##     P-Value [Acc > NIR] : < 2.2e-16       
     ##                                           
-    ##                   Kappa : 0.9516          
+    ##                   Kappa : 0.9474          
     ##                                           
-    ##  Mcnemar's Test P-Value : 7.833e-05       
+    ##  Mcnemar's Test P-Value : 1.88e-10        
     ## 
     ## Statistics by Class:
     ## 
     ##                      Class: A Class: B Class: C Class: D Class: E
-    ## Sensitivity            0.9807   0.9354   0.9488   0.9619   0.9723
-    ## Specificity            0.9909   0.9866   0.9839   0.9934   0.9973
-    ## Pos Pred Value         0.9772   0.9435   0.9258   0.9664   0.9880
-    ## Neg Pred Value         0.9923   0.9845   0.9891   0.9925   0.9938
+    ## Sensitivity            0.9825   0.9275   0.9532   0.9635   0.9542
+    ## Specificity            0.9879   0.9853   0.9844   0.9924   0.9978
+    ## Pos Pred Value         0.9699   0.9380   0.9281   0.9612   0.9899
+    ## Neg Pred Value         0.9930   0.9827   0.9901   0.9928   0.9898
     ## Prevalence             0.2845   0.1935   0.1744   0.1639   0.1838
-    ## Detection Rate         0.2790   0.1810   0.1654   0.1577   0.1787
-    ## Detection Prevalence   0.2855   0.1918   0.1787   0.1631   0.1809
-    ## Balanced Accuracy      0.9858   0.9610   0.9664   0.9777   0.9848
+    ## Detection Rate         0.2795   0.1795   0.1662   0.1579   0.1754
+    ## Detection Prevalence   0.2882   0.1913   0.1791   0.1643   0.1772
+    ## Balanced Accuracy      0.9852   0.9564   0.9688   0.9779   0.9760
 
 ### VII. Prediction
 
