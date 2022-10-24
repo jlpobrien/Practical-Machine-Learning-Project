@@ -1,6 +1,5 @@
 ---
 title: "Practical Machine Learning Project"
-author: "John Lavelle"
 date: '2022-10-22'
 output: html_document
 ---
