@@ -35,7 +35,7 @@ dim(testing_csv)
 From analysing the data, it is clear that there is an issue with NAs in certain variables, which should be removed. Additionally, the first 7 variables are descriptive (name, time stamps, date) are not needed. We are left with 53 variables. This a medium sized dataset so the 60% will be allocated to training set and 40% to the testing (i.e. validation) set. 
 
 
-```{r Cleaning Data, echo=FALSE}
+```{r Cleaning Data, echo=TRUE}
 #Removing NAs
 #sum(is.na(training_csv))
 
@@ -65,7 +65,7 @@ The first model we will try is a Random Forest. Using the validation variable fr
 
 A `trainControl` funciton is used to improve the `caret` models.
 
-```{r RandomForest, echo=FALSE}
+```{r RandomForest, echo=TRUE}
 
 #Control variable
 fitControl <- trainControl(method = "cv", number = 5)
@@ -87,7 +87,7 @@ cmRF
 
 The second model we will try is a Decision Tree. Here the accuracy has fallen to 49%.
 
-```{r Decision Tree, echo=FALSE}
+```{r Decision Tree, echo=TRUE}
 modFitDT <- train(classe~., data=training, method="rpart", trControl=fitControl)
 
 fancyRpartPlot(modFitDT$finalModel, main="Weight Lifting Exercise Decision Tree", sub="")
@@ -103,7 +103,7 @@ cmDT
 
 The final model is a GBM. Here the accuracy improves compared with Decision Tree: 96% accuracy and 4% error.
 
-```{r Boosted Tree, echo=FALSE}
+```{r Boosted Tree, echo=TRUE}
 modFitGBM <- train(classe~., data=training, method="gbm", trControl=fitControl, verbose=FALSE)
 
 predGBM <- predict(modFitGBM, testing)
@@ -119,7 +119,7 @@ cmGBM
 Finally, we will use the models to predict 20 different test cases using the original testing data. 
 The results of the Random Forest and GBM models were the same and were shown to be accurate the Course Project Prediction Quiz. While the results of the Decision Tree were not accurate, which the high out of sample error rate.
 
-```{r Prediction, echo=FALSE}
+```{r Prediction, echo=TRUE}
 
 predRF <- predict(modFitRF, testing_csv)
 
